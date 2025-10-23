@@ -1,0 +1,154 @@
+/* ------------------------------ */
+/* 🌦️  Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    color: #fff;
+    overflow: hidden;
+}
+
+/* ------------------------------ */
+/* ✨ Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ------------------------------ */
+/* 🧱  Container principal */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInScale 0.8s ease forwards;
+}
+
+/* ------------------------------ */
+/* 🔍  Caixa de pesquisa */
+.box-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 3s ease forwards;
+}
+
+#cidade {
+    width: 75%;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+#img-pesquisa {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#img-pesquisa:hover {
+    transform: scale(1.15);
+}
+
+/* ------------------------------ */
+/* 🌡️  Dados principais */
+#nome-cidade {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+#temperatura {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1.4s ease forwards;
+}
+
+#umidade {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.6s ease forwards;
+}
+
+/* ------------------------------ */
+/* ☀️  Box menor (descrição e ícone) */
+.box-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: fadeIn 1.8s ease forwards;
+}
+
+#previsao {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#img-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+#img-icon:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+/* ------------------------------ */
+/* 📱  Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    #temperatura {
+        font-size: 2rem;
+    }
+
+    #img-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
