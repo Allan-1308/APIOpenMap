@@ -19,5 +19,6 @@ async function dadosAPI(cidade) {
 function trocarDados(dados){
     document.getElementById("nome-cidade").innerHTML = "Tempo em: " + dados.name
     document.getElementById("img-icon").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`
+        document.getElementById('previsao').innerHTML = dados.weather[0].description.toUpperCase();
     document.getElementById("umidade").innerHTML = "Umidade relativa do ar: "+ dados.main.humidity + "%"
 }
